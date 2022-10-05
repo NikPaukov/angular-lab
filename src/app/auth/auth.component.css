@@ -1,0 +1,30 @@
+.main{
+width: 40%;
+  display: block;
+  margin: 5% auto;
+  border-radius: 2em;
+}
+mat-tab-labels {
+  color: white;
+}
+
+.example-full-width {
+  width: 70%;
+}
+form>*{
+  margin:3% ;
+}
+form{
+  margin: 5% 0;
+  flex-direction: column;
+ display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 500px){
+  .main{
+    width: 90%;
+  }
+}

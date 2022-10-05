@@ -1,0 +1,110 @@
+<div class="main second-bg">
+
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Login">
+
+
+      <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="legacy">
+          <mat-label>Email</mat-label>
+          <input  type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                 placeholder="Ex. pat@example.com">
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="legacy">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput [formControl]="passwordFormControl" [errorStateMatcher]="matcher"
+                 placeholder="Ex. pat@example.com">
+          <mat-error *ngIf="passwordFormControl.hasError('short')">
+            Password is too short
+          </mat-error>
+        </mat-form-field>
+<div class="buttons" style="display: flex; flex-direction: row; justify-content: space-evenly; width: 100%">
+        <button mat-button class="main-bg">Login</button>
+        <button routerLink="/" mat-button class="main-bg">Back</button>
+</div>
+      </form>
+
+    </mat-tab>
+    <mat-tab label="Register">
+      <form class="example-form">
+
+        <mat-form-field class="example-full-width" appearance="legacy">
+          <mat-label>Email</mat-label>
+          <input  type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                 placeholder="********">
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class="example-full-width" appearance="legacy">
+          <mat-label>Name</mat-label>
+          <input  matInput [formControl]="usernameControl" [errorStateMatcher]="matcher">
+          <mat-error *ngIf="emailFormControl.invalid">
+            This field cant be blank
+          </mat-error>
+
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="legacy">
+          <mat-label>Surname</mat-label>
+          <input   matInput [formControl]="usernameControl" [errorStateMatcher]="matcher">
+          <mat-error *ngIf="emailFormControl.invalid">
+            This field cant be blank
+          </mat-error>
+
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="legacy">
+          <mat-label>Second name</mat-label>
+          <input matInput [formControl]="usernameControl" [errorStateMatcher]="matcher">
+          <mat-error *ngIf="emailFormControl.invalid">
+            This field cant be blank
+          </mat-error>
+
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="legacy">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput [formControl]="passwordFormControl" [errorStateMatcher]="matcher"
+                 placeholder="Ex. pat@example.com">
+          <mat-error *ngIf="passwordFormControl.hasError('short')">
+            Password is too short
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Choose a date</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker touchUi #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="example-full-width">
+          <mat-label>Choose group</mat-label>
+          <mat-select >
+            <mat-option class="main-bg" value="12">IA-12</mat-option>
+            <mat-option class="main-bg" value="13">IA-13</mat-option>
+            <mat-option class="main-bg" value="11">IA-11</mat-option>
+          </mat-select>
+          <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+        </mat-form-field>
+        <div class="buttons" style="display: flex; flex-direction: row; justify-content: space-evenly; width: 100%">
+
+        <button mat-button class="main-bg">Register</button>
+        <button routerLink="/" mat-button class="main-bg">Back</button>
+        </div>
+      </form>
+
+    </mat-tab>
+  </mat-tab-group>
+</div>
+

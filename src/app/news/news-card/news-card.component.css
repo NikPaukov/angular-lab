@@ -1,0 +1,39 @@
+mat-card:hover {
+  transform: scale(1.1);
+}
+mat-card {
+  transition: 0.7s;
+}
+img{
+  max-height: 300px;
+  max-width: 260px;
+  margin: 0;
+}
+.example-card * {
+  margin: 0;
+}
+a{
+  color: black;
+}
+mat-card-actions {
+  text-align: center;
+}
+.example-card {
+  padding: 0;
+  margin: 0;
+  max-width: 260px;
+}
+.phone {
+  padding-bottom: 1px;
+}
+* {
+  font-family: Georgia, serif; font-variant: normal;
+}
+mat-card-header{
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+

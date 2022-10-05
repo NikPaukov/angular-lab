@@ -1,0 +1,25 @@
+mat-card:hover {
+  transform: scale(1.1);
+}
+mat-card {
+  transition: 0.7s;
+}
+img{
+  max-height: 300px;
+  max-width: 300px;
+}
+.example-card {
+  max-width: 400px;
+}
+.phone {
+  padding-bottom: 1px;
+}
+
+@media screen and (max-width: 500px) {
+  mat-card-content {
+    display: none;
+  }
+  mat-card-actions {
+    display: none;
+  }
+}

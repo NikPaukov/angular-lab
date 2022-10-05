@@ -1,0 +1,37 @@
+<mat-toolbar class = "main-bg" >
+<button mat-icon-button routerLink="/">
+  <mat-icon>home</mat-icon>
+</button>
+<span>KPI</span>
+<span class="example-spacer"></span>
+  <a routerLinkActive="active"  routerLink="/faq" class="pc">FAQ</a>
+  <a routerLinkActive="active" routerLink="/contacts"  class="pc">Contacts</a>
+  <a routerLinkActive="active" routerLink="/auth"  class="pc">Auth</a>
+  <a routerLinkActive="active" routerLink="/news"  class="pc">News</a>
+  <a routerLinkActive="active" routerLink="/students"  class="pc">Students</a>
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="phone">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" class="second-bg">
+    <button mat-menu-item routerLinkActive="active" routerLink="/contacts">
+      <mat-icon>phone</mat-icon>
+      <span>Contacts</span>
+    </button>
+    <button mat-menu-item routerLinkActive="active" routerLink="/students">
+      <mat-icon>table</mat-icon>
+      <span>Students</span>
+    </button>
+    <button mat-menu-item routerLinkActive="active" routerLink="/news">
+      <mat-icon>newspaper</mat-icon>
+      <span>News</span>
+    </button>
+    <button mat-menu-item routerLinkActive="active" routerLink="/auth">
+      <mat-icon>login</mat-icon>
+      <span>login</span>
+    </button>
+    <button mat-menu-item routerLinkActive="active" routerLink="/faq">
+      <mat-icon>question_answer</mat-icon>
+      <span>FAQ</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
