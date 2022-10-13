@@ -1,0 +1,7 @@
+<label for="width">Ширина:</label>
+<input type="number" id="width" (input)="change()" min="0"  [(ngModel)]="width" name="width">
+<label for="height">Висота:</label>
+<input type="number"  id="height"(input)="change()" min="0" [(ngModel)]="height" name="height">
+<p>Периметр: {{perim}}</p>
+<p>Площа: {{square}}</p>
+<p>Діагональ: {{diagonal.toFixed(3)}}</p>

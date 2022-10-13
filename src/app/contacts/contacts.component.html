@@ -1,0 +1,37 @@
+<app-header></app-header>
+<main class="second-bg">
+  <mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Task 1
+      </mat-panel-title>
+  </mat-expansion-panel-header>
+   <app-counter></app-counter>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Task 2
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-cats></app-cats>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Task 3
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-trans></app-trans>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Task 4
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <input type="date" name="data"(change)="getWeek(date.value)" #date id="date">
+    <h2>You were born:<br> {{week}}</h2>
+  </mat-expansion-panel>
+</main>
+<app-footer></app-footer>
